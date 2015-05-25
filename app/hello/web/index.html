@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <script src="/bower_components/underscore/underscore.js"></script>
+      <script src="/bower_components/bluebird/js/browser/bluebird.js"></script>
+      <script src="/bower_components/jquery/dist/jquery.js"></script>
+      <script src="/bower_components/autobahn/autobahn.js"></script>
+      <script src="/bower_components/EaselJS/lib/easeljs-0.8.0.combined.js"></script>
+      <script src="/bower_components/TweenJS/lib/tweenjs-0.6.0.combined.js"></script>
+      <script src="/bower_components/spin.js/spin.js"></script>
+
+      <script src="/js/app.js"></script>
+
+      <link rel="stylesheet" href="/styles/styles.css">
+   </head>
+
+   <body>
+      <div id="wt-wrap">
+         <div id="loading">
+            <h2>Loading...</h2>
+
+            <div id="spinner"></div>
+         </div>
+
+         <canvas id="canvas"></canvas>
+      </div>
+         
+
+      <script>
+         // fired when connection is established and session attached
+         //
+         //connection.onopen = function (session, details) {
+
+            //console.log("Connected");
+
+            /*
+            function on_counter (args) {
+               var counter = args[0];
+               console.log("on_counter() event received with counter " + counter);
+            }
+            session.subscribe('com.example.oncounter', on_counter).then(
+               function (sub) {
+                  console.log('subscribed to topic');
+               },
+               function (err) {
+                  console.log('failed to subscribe to topic', err);
+               }
+            );
+            */
+
+
+            // PUBLISH an event every second
+            //
+            /*
+            t1 = setInterval(function () {
+
+               session.publish('com.example.onhello', ['Hello from JavaScript (browser)']);
+               console.log("published to topic 'com.example.onhello'");
+            }, 1000);
+            */
+
+
+            // REGISTER a procedure for remote calling
+            //
+            /*
+            function mul2 (args) {
+               var x = args[0];
+               var y = args[1];
+               console.log("mul2() called with " + x + " and " + y);
+               return x * y;
+            }
+            session.register('com.example.mul2', mul2).then(
+               function (reg) {
+                  console.log('procedure registered');
+               },
+               function (err) {
+                  console.log('failed to register procedure', err);
+               }
+            );
+            */
+         //}
+
+
+
+      </script>
+   </body>
+</html>
